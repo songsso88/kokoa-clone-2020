@@ -1,37 +1,21 @@
-#friends-display-link {
-  text-align: center;
-  display: block;
-  background-color: #fafafa;
-  padding: 15px 0px;
-  font-size: 16px;
-  margin-bottom: 10px;
-  margin-top: -15px;
-}
-
-#friends-display-link i {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.friends-screen__channel {
-  margin-top: 25px;
+.recommended-friends {
+  margin: 25px 0px;
+  padding: 25px 0px;
   border-top: var(--main-border);
-  padding-top: 20px;
+  border-bottom: var(--main-border);
 }
-.friendds-screen__channel-haeder {
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
+
+.recommended-friends__title {
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.open-chat__header {
-  display: flex;
-  justify-content: space-between;
-  opacity: 0.8;
-  margin-bottom: 25px;
-}
-.open-chat__header span {
-  opacity: 0.6;
+.recommended-friends span {
+  display: block;
+  margin: 100px 0;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
 }
 
 .open-post {
@@ -108,26 +92,22 @@
   margin-left: 3px;
 }
 
-@keyframes hideSplashScreen {
-  from {
-    opacity: 1;
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
   }
-  to {
-    opacity: 0;
-    visibility: hidden;
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
   }
 }
 
-#splash-screen {
-  background-color: var(--yellow);
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 64px;
-  animation: hideSplashScreen 0.3s ease-in-out forwards;
-  animation-delay: 1s;
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
 }
